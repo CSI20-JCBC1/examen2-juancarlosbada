@@ -1,0 +1,13 @@
+<h2>Listado porteros</h2>
+
+<ul >
+    <li *ngFor="let portero of porteros" routerLink="edit/{{portero.documentId}}">
+        <strong>Nombre:</strong> {{portero.data.nombre}} // <strong>Apellidos:</strong> {{portero.data.apellidos}} // <strong>Ciudad:</strong> {{portero.data.ciudad}} // <strong>Telefono:</strong> {{portero.data.telefono}} // <strong>Mail:</strong> {{portero.data.mail}} // <strong>MesDisponible:</strong> {{portero.data.mesDisponible}}
+    </li>
+    
+</ul>
+
+<h5>Para editar o borrar un portero pulse encima de este.</h5>
+<br>
+<h5>Para crear un portero pulse el siguiente botón.</h5>
+<button routerLink="edit/nuevoPortero" class="btn btn-dark">Crear Portero</button>

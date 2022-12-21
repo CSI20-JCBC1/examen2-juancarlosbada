@@ -1,0 +1,101 @@
+<form [formGroup]="formPortero" class="form-group container w-50 mt-3" >
+    
+    <div>
+      <label for="nombre">Nombre:</label>
+      <input
+        type="text"
+        formControlName="nombre"
+        id="nombre"
+        class="formControl"
+      />
+    </div>
+  
+    <div>
+      <label for="apellidos">Apellidos: </label>
+      <input
+        type="text"
+        formControlName="apellidos"
+        id="apellidos"
+        class="formControl"
+      />
+    </div>
+
+    <div>
+      <label for="ciudad">Ciudad:</label>
+      <input
+        type="text"
+        formControlName="ciudad"
+        id="ciudad"
+        class="formControl"
+      />
+    </div>
+  
+    <div>
+      <label for="telefono">Telefono:</label>
+      <input
+        type="text"
+        formControlName="telefono"
+        id="telefono"
+        class="formControl"
+      />
+    </div>
+  
+    <div>
+      <label for="mail">Mail</label>
+      <input
+        type="text"
+        formControlName="mail"
+        id="mail"
+        class="formControl"
+      />
+    </div>
+  
+    <div>
+      <label for="mesDisponible">Mes disp:</label>
+      <select type="text"
+      formControlName="mesDisponible"
+      id="mesDisponible"
+      class="formControl">
+        <option>Enero</option>
+        <option>Febrero</option>
+        <option>Marzo</option>
+        <option>Abril</option>
+        <option>Mayo</option>
+        <option>Junio</option>
+        <option>Julio</option>
+        <option>Agosto</option>
+        <option>Septiembre</option>
+        <option>Octubre</option>
+        <option>Noviembre</option>
+        <option>Diciembre</option>
+      </select>
+    </div>
+
+    <button
+      class="btn btn-primary m-2"
+      (click)="insertar()"
+      [disabled]="!formPortero.valid"
+    >
+      Insertar
+    </button>
+  
+    <button
+      class="btn btn-primary m-2"
+      (click)="editar()"
+      [disabled]="!formPortero.valid"
+    >
+      Actualizar
+    </button>
+  
+    <button
+    class="btn btn-warning"
+      (click)="borrar()"
+      [disabled]="!formPortero.valid"
+    >
+      Borrar
+    </button>
+  
+    <button class="btn btn-danger m-2" (click)="cancel()">Volver</button>
+  
+  </form>
+  
