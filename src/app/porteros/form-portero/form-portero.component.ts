@@ -61,7 +61,7 @@ export class FormPorteroComponent implements OnInit {
         }
       )
     }
-
+    //Creamos usuario en la base de datos
   }
 
   editar() {
@@ -77,7 +77,7 @@ export class FormPorteroComponent implements OnInit {
   }
 
   borrar() {
-    //Delete de portero
+    //Borramos el portero en la base de datos
     this.fire.delete('porteros', this.documentId);
     this.location.back();
   }

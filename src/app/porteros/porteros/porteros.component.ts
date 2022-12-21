@@ -14,7 +14,7 @@ export class PorterosComponent implements OnInit {
   constructor(private firebase:FirebaseService) { }
 
   ngOnInit(): void {
-    //Cargamos lista de porteros para poder mostrarla
+    //Cargamos lista de porteros para poder mostrarla en el html
     this.firebase.getAll(this.coleccion).subscribe((resp: any)=>{
       this.porteros=[];
       resp.forEach((porteroSnapshot:any) => {

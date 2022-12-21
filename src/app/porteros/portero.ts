@@ -10,3 +10,5 @@ export interface Portero {
 
   }
 }
+
+//Interfaz para saber los campos que vamos a recoger
